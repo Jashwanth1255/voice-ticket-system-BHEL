@@ -1,4 +1,4 @@
-# Fully Local AI Voice-to-Ticket System for BHEL DIGIT Service Requests
+# Local AI Voice-to-Ticket System for BHEL DIGIT Service Requests
 
 This project records an employee's voice complaint, transcribes it locally with Faster Whisper, sends the transcript over LAN to an LM Studio server running a local LLM on another device, and returns a structured IT support ticket in JSON format.
 
@@ -71,4 +71,4 @@ python voice_to_llm.py
 
 ## Resume Summary
 
-Built a fully local AI voice-to-ticket pipeline using Faster Whisper for offline speech transcription and a LAN-connected LM Studio LLM server for structured JSON ticket generation, enabling private IT support automation without cloud AI API dependency.
+Built a local AI voice-to-ticket pipeline using Faster Whisper for offline speech transcription and a LAN-connected LM Studio LLM server for structured JSON ticket generation, enabling private IT support automation without cloud AI API dependency.
