@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+
+# Local virtual environments
+vir/
+venv/
+.venv/
+
+# Local runtime audio captures
+audio.wav
+recorded.wav
+*.wav
+
+# Local agent/editor metadata
+.agents/
+.codex/
+
+# Environment and secrets
+.env
+.env.*
+
+# Accidental local command scratch file
+py -m venv venv.py
