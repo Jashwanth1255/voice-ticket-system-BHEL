@@ -18,6 +18,7 @@ recorded.wav
 # Environment and secrets
 .env
 .env.*
+!.env.example
 
 # Accidental local command scratch file
 py -m venv venv.py

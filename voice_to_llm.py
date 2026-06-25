@@ -12,14 +12,17 @@ if hasattr(sys.stdout, "reconfigure"):
 # ---------------------------
 # CONFIG
 # ---------------------------
-# Put the other Windows device's API here.
-# Example for LM Studio/OpenAI-compatible server:
+# Put the other Windows device's LM Studio API here.
+# Example for a LAN-hosted OpenAI-compatible LM Studio server:
 #   set LLM_API_URL=http://10.5.131.123:1234/v1/chat/completions
 LLM_API_URL = os.getenv(
     "LLM_API_URL",
     "http://10.5.65.131:1234/v1/chat/completions"
 )
-LLM_MODEL = "qwen3.5-9b-sft-claude-opus-reasoning-unsloth"
+LLM_MODEL = os.getenv(
+    "LLM_MODEL",
+    "qwen3.5-9b-sft-claude-opus-reasoning-unsloth"
+)
 # LLM_MODEL = "it-support-mistral-7b-expert"
 # qwen3.5-9b-sft-claude-opus-reasoning-unsloth
 WHISPER_MODEL = os.getenv("WHISPER_MODEL", "medium")
@@ -96,7 +99,8 @@ payload = {
             "content": """
 You are an IT Operations & Maintenance (IT O&M) ticketing assistant.
 
-You are running as a Mistral instruct model. Follow these instructions exactly.
+You are running as a local instruction-following model through LM Studio.
+Follow these instructions exactly.
 
 Your job:
 - Convert user speech text into structured IT incident tickets.
